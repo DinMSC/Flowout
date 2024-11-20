@@ -15,7 +15,7 @@ const GraphFooter: React.FC<GraphFooterProps> = ({
       <div
         className={`flex items-center rounded-md ${
           isPositive
-            ? 'bg-emerald-200 text-emerald-600'
+            ? 'bg-[#ddf6e0] text-emerald-600'
             : 'bg-red-50 text-red-600'
         } px-2 py-1 text-xl font-medium`}
       >
