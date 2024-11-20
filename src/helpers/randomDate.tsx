@@ -1,7 +1,7 @@
 export const randomDate = (): string => {
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
-  const currentMonth = currentDate.getMonth(); // 0-based index (0 = January, 11 = December)
+  const currentMonth = currentDate.getMonth();
 
   const randomDayStart = Math.floor(Math.random() * 7) + 1;
   const randomDayEnd = randomDayStart + 6;
