@@ -8,10 +8,10 @@ interface DataPoint {
 type ApiResponse = DataPoint[];
 
 export async function GET() {
-  const randomData: ApiResponse = Array.from({ length: 7 }).map((_, index) => ({
-    timestamp: `Oct ${index + 2}`,
+  const graphData: ApiResponse = Array.from({ length: 7 }).map((_, index) => ({
+    timestamp: `Oct ${index + 2}`, // fix timestamp
     value: Math.floor(Math.random() * (550 - 400) + 10),
   }));
 
-  return NextResponse.json(randomData);
+  return NextResponse.json(graphData);
 }

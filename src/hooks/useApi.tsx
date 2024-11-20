@@ -1,8 +1,9 @@
+import { GRAPH_DATA } from '@/constants/apis';
 import { useQuery } from '@tanstack/react-query';
 
 export const useData = () => {
   const getGraphData = async () => {
-    const response = await fetch('/api/graph-data'); // hide with constants
+    const response = await fetch(GRAPH_DATA);
 
     if (!response.ok) {
       throw new Error('Failed to fetch graph data');
