@@ -11,7 +11,6 @@ const GraphFooter: React.FC<GraphFooterProps> = ({
 }) => {
   return (
     <div className='flex items-center justify-between'>
-      {/* Ovdje datum */}
       <div className='text-xl text-gray-500'>Oct 2 - Oct 8, 2023</div>
       <div
         className={`flex items-center rounded-md ${

@@ -10,9 +10,14 @@ const GraphHeader: React.FC<GraphHeaderProps> = ({ onRefresh }) => {
     <div className='flex items-center justify-between pb-1'>
       <div className='flex items-center gap-2'>
         <h2 className='text-2xl'>Total customers</h2>
-        <button className='rounded-md bg-[#f3f5f7] p-1.5 w-[38px] flex justify-center items-center'>
-          <FaInfo color='#a0a2a8' />
-        </button>
+        <div className='relative group'>
+          <button className='rounded-md bg-[#f3f5f7] p-1.5 w-[38px] flex justify-center items-center'>
+            <FaInfo color='#a0a2a8' />
+          </button>
+          <div className='absolute bottom-full mb-2 hidden w-max rounded-md bg-gray-800 px-3 py-1 text-white text-xs group-hover:block'>
+            This is a cool graph!
+          </div>
+        </div>
       </div>
       <button
         onClick={onRefresh}
