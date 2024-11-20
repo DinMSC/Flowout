@@ -4,9 +4,19 @@ import { useData } from '@/hooks/useApi';
 import GraphHeader from './GraphHeader';
 import GraphCharts from './GraphCharts';
 import GraphFooter from './GraphFooter';
+import { useEffect, useState } from 'react';
+import { randomDate } from '@/helpers/randomDate';
 
 const Graph = () => {
+  const [dateRange, setDateRange] = useState<string>('');
+
   const { data, isLoading, error, refetch } = useData();
+
+  useEffect(() => {
+    if (!isLoading && data) {
+      setDateRange(randomDate());
+    }
+  }, [data, isLoading]);
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -32,6 +42,7 @@ const Graph = () => {
       <GraphFooter
         isPositive={isPositive}
         percentageChange={percentageChange}
+        dateRange={dateRange}
       />
     </>
   );
