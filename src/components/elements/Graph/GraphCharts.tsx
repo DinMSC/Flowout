@@ -21,7 +21,12 @@ const GraphCharts: React.FC<GraphChartsProps> = ({ data }) => (
       axisRight={null}
       axisBottom={null}
       axisLeft={null}
-      borderRadius={4}
+      borderRadius={6}
+      borderWidth={1}
+      borderColor={{
+        from: 'color',
+        modifiers: [['darker', 0.2]],
+      }}
       theme={{
         axis: {
           ticks: {
@@ -37,8 +42,8 @@ const GraphCharts: React.FC<GraphChartsProps> = ({ data }) => (
           id: 'myGradient',
           type: 'linearGradient',
           colors: [
-            { offset: 0, color: '#4ade80' },
-            { offset: 100, color: '#86efac' },
+            { offset: 0, color: '#4ed958' },
+            { offset: 100, color: '#bdf8c1' },
           ],
         },
       ]}
